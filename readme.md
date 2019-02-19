@@ -8,6 +8,10 @@
 #### Directory
 * test - It include the test runner and the tests which have test cases.
 
+clone repo locally: 
+
+    git clone https://github.com/vishnumishra/getjerry
+    cd getjerry
 
 Run all test: 
     
