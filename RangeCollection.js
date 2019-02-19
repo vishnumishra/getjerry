@@ -34,7 +34,7 @@ class RangeCollection {
      * @param {number} number - Number which needs to insert
      */
     getIndexToInsert(number) {
-        const index = this.store.findIndex(element => element > number);
+        const index = this.store.findIndex(element => element >= number);
         return index > -1 ? index : this.store.length;
     }
 
@@ -44,13 +44,21 @@ class RangeCollection {
      */
     insertIntoStore(range) {
         let rangeElements = this.giveRange(range[0], range[1], []);
+        /**
+         * Return if the rangeElements don't have any value;
+         */
         if (!rangeElements.length) return;
-        const indexToInsert = this.getIndexToInsert(range[0]);
+        
+        let indexToInsert = this.getIndexToInsert(range[0]);
+        
         rangeElements.forEach((element, ind) => {
-            const elementInStore = this.store[indexToInsert + ind];
-            if (elementInStore === element) return;
-            this.store.splice(indexToInsert + ind, 0, element);
-        })
+            const index = indexToInsert + ind;
+            if(index > 0){
+                const elementInStore = this.store[index];
+                if (elementInStore === element) return;
+            }
+            this.store.splice(index, 0, element);
+        });
     }
 
     /**
@@ -70,7 +78,9 @@ class RangeCollection {
      * @param {Array<number>} range - Array of two integers that specify beginning and end of range.
      */
     remove(range) {
-        // TODO: implement this
+        const lowerRange = range[0];
+        const upperRange = range[1];
+        this.store = this.store.filter(ele=> !(ele >= lowerRange && ele < upperRange));
     }
     /**
      * Create RangeCollection from Array (store)

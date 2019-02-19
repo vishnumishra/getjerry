@@ -47,6 +47,3 @@ test.remove_method_should_remove_the_range_from_range_collection_2 = function(){
 	rc.remove([3, 19]);
 	assert.equal(rc.getResult(), '[1, 3) [19, 21)')
 };
-
-// range [10, 10 ] [1,8]
-//  [11, 21) [15, 17)
