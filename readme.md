@@ -1,17 +1,23 @@
 
 ### Range Collection
+#### This program don't have any dependencies. it just need Node.js (^9.11.2)
 
->Note: You should have NodeJs install to run this.
+>Note: You should have NodeJs(^9.11.2) install to run this program.
 
-Run test: 
+
+#### Directory
+* test - It include the test runner and the tests which have test cases.
+
+
+Run all test: 
     
     npm test
 
-List tests: 
+List all test: 
     
     npm run list
 
-Get Result: 
+Print Results:
 
     npm start
 
