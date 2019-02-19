@@ -4,7 +4,7 @@
   "description": "This is getjerry assingment",
   "main": "RangeCollection.js",
   "scripts": {
-    "test": "cd test && node runTest.js RangeCollection.test.js",
+    "test": "cd test && node runTest.js RangeCollection.test.js && cd ..",
     "start": "node inputs.js"
   },
   "author": "vishnu mishra",
