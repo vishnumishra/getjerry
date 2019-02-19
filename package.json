@@ -1,0 +1,12 @@
+{
+  "name": "range-collection",
+  "version": "1.0.0",
+  "description": "This is getjerry assingment",
+  "main": "RangeCollection.js",
+  "scripts": {
+    "test": "cd test && node runTest.js RangeCollection.test.js",
+    "start": "node inputs.js"
+  },
+  "author": "vishnu mishra",
+  "license": "ISC"
+}
