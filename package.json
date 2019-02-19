@@ -5,6 +5,7 @@
   "main": "RangeCollection.js",
   "scripts": {
     "test": "cd test && node runTest.js RangeCollection.test.js && cd ..",
+    "list": "cd test && node runTest.js RangeCollection.test.js -list && cd ..",
     "start": "node inputs.js"
   },
   "author": "vishnu mishra",
